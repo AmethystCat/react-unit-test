@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
     "build": "webpack",
-    "test": "mocha --compilers js:babel-register --require ./test/test_helper.js  --recursive"
+    "test": "mocha --compilers js:babel-register --require ./test/test_helper.js  --recursive",
     "test:watch": "npm test -- --watch"
   },
   "author": "HC",
@@ -19,8 +19,10 @@
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.5.2",
     "chai": "^3.5.0",
+    "enzyme": "^2.0.0",
     "mocha": "^2.4.5",
     "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
     "sinon": "^1.17.3",
     "webpack": "^1.12.13",

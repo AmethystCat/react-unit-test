@@ -1,5 +1,5 @@
 import {expect} from "chai";
-import sion from "sion";
+import sinon from "sinon";
 
 global.expect = expect;
-global.sion = sion;
+global.sinon = sinon;
