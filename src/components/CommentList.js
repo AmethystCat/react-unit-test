@@ -15,7 +15,9 @@ class CommentList extends Component {
 
     render(){
         return (
-            <div>ComponentList</div>
+            <ul>
+                <li>hello react</li>
+            </ul>
         );
     }
 }
