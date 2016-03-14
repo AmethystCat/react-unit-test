@@ -3,38 +3,27 @@
  */
 import React from 'react';
 import CommentList from '../../src/components/CommentList';
-import {
-    mount
-} from 'enzyme';
+import { mount } from 'enzyme';
 
-describe('(Component) CommentList',()=>{
-    it('calls componentDidMount', () => {
+describe('(Component) CommentList',() => {
+
+    it('calls componentDidMount',() => {
         const props = {
-                    onMount: ()=>{},
-                    isActive: false
-                };
+            onMount: () => {},
+            isActive: false
+        };
         sinon.spy(CommentList.prototype, 'componentDidMount');
-        const wrapper = mount(<CommentList {...props}/>);
+        const wrapper = mount(<CommentList {...props} />);
         expect(CommentList.prototype.componentDidMount.calledOnce).to.be.true;
         CommentList.prototype.componentDidMount.restore();
     });
-    //it('calls componentDidMount',()=>{
-    //
-    //    const props = {
-    //        onMount: ()=>{},
-    //        isActive: false
-    //    };
-    //
-    //    const wrapper = mount(<CommentList {...props}/>);
-    //
-    //    expect(
-    //        wrapper.prototype.componentDidMount.calledOnce
-    //    ).to.be.true;
-    //});
-
-    it('call onMount prop once it mounts',()=>{
-        const props = { onMount: sinon.spy() };
+    
+    it('call onMount prop once it mounts',() => {
+        const props = {
+            onMount: sinon.spy()
+        };
         mount(<CommentList {...props} />);
         expect(props.onMount.calledOnce).to.be.true;
     });
+
 });
